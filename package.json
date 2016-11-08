@@ -1,5 +1,5 @@
 {
-  "name": "react-ui-kit-boilerplate",
+  "name": "@rambler-adtech/ui-kit",
   "version": "1.0.0",
   "main": "lib/index.js",
   "author": "Andrew Romanov <me@andrew-r.ru>",
