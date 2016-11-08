@@ -1,9 +1,11 @@
 /* eslint-disable import/prefer-default-export */
 
 // Import all components
-import Button from './components/Button';
+import RadioToggle from './components/RadioToggle';
+import CountPerTimeBarChart from './components/CountPerTimeBarChart';
 
 
 export {
-	Button,
+	RadioToggle,
+	CountPerTimeBarChart,
 };

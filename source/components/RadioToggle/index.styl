@@ -1,0 +1,32 @@
+@import "../../variables"
+
+.radio_toggle_item
+	&-input
+		display none
+
+	&-label
+		padding 12px 14px
+		font-size 14px
+		line-height 1
+		white-space nowrap
+		border 2px solid $input-border-color
+		border-right-width 0
+		color $text-color
+		background #fff
+
+		.radio_toggle_item:first-child &
+			border-radius 3px 0 0 3px
+
+		.radio_toggle_item:last-child &
+			border-radius 0 3px 3px 0
+			border-right-width 2px
+
+		.radio_toggle_item:first-child:last-child &
+			border-radius 0
+
+		.radio_toggle_item--active &
+			color $theme-color
+			border-color rgba($theme-color, 50%)
+
+		.radio_toggle_item--active + .radio_toggle_item &
+			border-left-color rgba($theme-color, 50%)
