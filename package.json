@@ -19,7 +19,8 @@
   ],
   "dependencies": {
     "classnames": "^2.2.5",
-    "d3": "^4.3.0"
+    "d3": "^4.3.0",
+    "shortid": "^2.2.6"
   },
   "devDependencies": {
     "autoprefixer": "^6.5.1",

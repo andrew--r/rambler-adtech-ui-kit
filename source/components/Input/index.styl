@@ -1,0 +1,48 @@
+@import "../../variables"
+
+
+.input
+	box-sizing border-box
+	display block
+	padding-bottom 2em
+	font-size $base-font-size
+
+	&-label,
+	&-field
+		box-sizing border-box
+		display block
+		width 100%
+
+	&-label
+		font-size inherit
+		padding-bottom .5em
+		cursor pointer
+		user-select none
+
+		.input_required &::after
+			content '*'
+			color $error-color
+
+	&-field_wrap
+		position relative
+
+	&-field
+		padding .5625em .875em
+		font-size .875em
+		outline 0
+		border 1px solid $input-border-color
+		border-radius 3px
+		transition border-color $transition-speed
+
+		&:hover
+			border-color darken($input-border-color, 10%)
+
+		&:active,
+		&:focus
+			border-color $theme-color
+			transition none
+
+	&-error
+		padding-top .5em
+		font-size .875em
+		color $error-color
