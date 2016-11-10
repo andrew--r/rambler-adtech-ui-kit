@@ -31,6 +31,8 @@ export default class Input extends React.Component {
 					<input
 						id={id}
 						type={props.type}
+						value={props.value}
+						onChange={props.onChange}
 						placeholder={props.placeholder}
 						minLength={5}
 						className="input-field"
@@ -45,6 +47,14 @@ export default class Input extends React.Component {
 }
 
 Input.propTypes = {
+	/**
+	 * Значение поля
+	 */
+	value: PropTypes.string.isRequired,
+	/**
+	 * Обработчик изменения значения
+	 */
+	onChange: PropTypes.func.isRequired,
 	/**
 	 * Тип поля
 	 */
@@ -73,11 +83,13 @@ Input.propTypes = {
 	 * HTML-атрибуты для поля ввода
 	 */
 	inputAttributes: PropTypes.object, // eslint-disable-line react/forbid-prop-types
+
 };
 
 Input.defaultProps = {
 	type: 'text',
 	id: '',
+	value: '',
 	label: '',
 	placeholder: '',
 	error: '',
