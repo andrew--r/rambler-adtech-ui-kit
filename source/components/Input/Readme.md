@@ -1,28 +1,12 @@
- Простое поле ввода:
+Примеры использования:
 
  ```
-<Input value="" onChange={() => {}} />
- ```
-
-Пример комплексного использования:
-
-```
 <div>
-	<Input
-		required
-		value=""
-		onChange={() => {}}
-		label="Электронная почта"
-		placeholder="Электронная почта"
-	/>
-	<Input
-		required
-		type="password"
-		value=""
-		onChange={() => {}}
-		label="Пароль"
-		placeholder="Пароль"
-		error="Пароль не должен содержать спецсимволы"
-	/>
+	<p style={{paddingBottom: '.25em'}}>
+		<Input value="" onChange={() => {}} placeholder="Электронная почта" />
+	</p>
+	<p style={{paddingBottom: '.25em'}}>
+		<Input disabled value="" onChange={() => {}} placeholder="Электронная почта" />
+	</p>
 </div>
-```
+ ```

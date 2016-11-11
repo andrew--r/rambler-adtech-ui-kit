@@ -2,36 +2,20 @@
 
 
 .input
+	position relative
 	box-sizing border-box
 	display block
-	padding-bottom 2em
 	font-size $base-font-size
 
-	&-label,
-	&-field
+	&__field
 		box-sizing border-box
 		display block
 		width 100%
-
-	&-label
-		font-size inherit
-		padding-bottom .5em
-		cursor pointer
-		user-select none
-
-		.input_required &::after
-			content '*'
-			color $error-color
-
-	&-field_wrap
-		position relative
-
-	&-field
 		padding .5625em .875em
 		font-size .875em
 		outline 0
 		border 1px solid $input-border-color
-		border-radius 3px
+		border-radius .1875em
 		transition border-color $transition-speed
 
 		&:hover
@@ -42,7 +26,9 @@
 			border-color $theme-color
 			transition none
 
-	&-error
-		padding-top .5em
-		font-size .875em
-		color $error-color
+		.input--disabled &,
+		.input--disabled &:hover
+			cursor default
+			color $muted-text-color
+			background $muted-background-color
+			border-color $muted-border-color

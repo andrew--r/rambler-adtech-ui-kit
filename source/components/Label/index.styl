@@ -1,0 +1,17 @@
+@import "../../variables"
+
+
+.label
+	display block
+	padding-bottom: .5em
+	font-size $base-font-size
+	cursor pointer
+	user-select none
+
+	&__text
+		font-size .875em
+		font-weight 700
+
+		.label--required &::after
+			content '*'
+			color $error-color

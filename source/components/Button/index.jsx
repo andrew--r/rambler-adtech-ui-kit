@@ -4,7 +4,7 @@ import './index.styl';
 
 
 /**
- * Кнопка
+ * Кнопка.
  */
 export default function Button(props) {
 	const className = classNames({
@@ -56,7 +56,7 @@ Button.propTypes = {
 	fullWidth: PropTypes.bool,
 	bordered: PropTypes.bool,
 	/**
-	 * Индикатор неактивности кнопки, если передан — onClick не будет вызываться при клике
+	 * если `disabled={true}`, onClick не будет срабатывать
 	 */
 	disabled: PropTypes.bool,
 	onClick: PropTypes.func,

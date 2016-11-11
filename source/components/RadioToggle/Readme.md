@@ -3,8 +3,13 @@
 ```
 const toggles = ['показы', 'клики', 'CTR', 'охват'];
 const activeIndex = 0;
+const rootStyle = {
+	display: 'flex',
+	padding: '1rem .25rem',
+	fontFamily: 'sans-serif',
+};
 
-<div style={{display: 'flex', padding: '1rem .25rem'}}>
+<div style={rootStyle}>
 	{toggles.map((name, index) => {
 		return (
 			<RadioToggle
