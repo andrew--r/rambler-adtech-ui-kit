@@ -1,0 +1,87 @@
+@import "../../variables"
+
+
+$bottom-padding = 0em
+$size-small = 1.875em - $bottom-padding
+$size-medium = 2.5em - $bottom-padding
+$size-large = 3.125em - $bottom-padding
+
+$base-size = 2.5em - $bottom-padding
+
+$hover-background = lighten($theme-color, 15%)
+$hover-border-bottom-color = lighten($theme-color, 5%)
+
+$active-background =$theme-color
+$active-border-top-color = darken($theme-color, 10%)
+
+
+.button
+	box-sizing border-box
+	display inline-block
+	padding 0 1.25em $bottom-padding
+	font-size $base-font-size
+	line-height $base-size
+	text-align center
+	text-decoration none
+	cursor pointer
+	color #fff
+	background $theme-color
+	outline 0
+	border 2px solid $theme-color
+	border-radius .3125em
+	transition background $transition-speed, border $transition-speed, color $transition-speed
+	user-select none
+
+	&:focus,
+	&:hover
+		transition none
+		border-color $hover-background
+		border-bottom-color $hover-border-bottom-color
+		background $hover-background
+
+	&:active
+		border-color $active-background
+		border-top-color $active-border-top-color
+		background $active-background
+
+	&__inner
+		font-size .875em
+
+		.button--large &
+			font-size 1em
+
+	&--small
+		font-size $base-font-size * .75
+
+	&--large
+		font-size $base-font-size * 1.25
+
+	&--fullwidth
+		display block
+		width 100%
+
+	&--bordered
+		color $theme-color
+		background transparent
+		border-color $theme-color
+
+		&:focus,
+		&:hover
+			color $hover-background
+			background transparent
+			border-color $hover-background
+
+		&:active
+			color $active-background
+			background transparent
+			border-color $active-background
+
+
+	&--disabled,
+	&--disabled:focus,
+	&--disabled:hover,
+	&--disabled:active
+		color #a9abb1
+		background #f4f5f6
+		border-color rgba(30, 38, 59, .10)
+		cursor default
