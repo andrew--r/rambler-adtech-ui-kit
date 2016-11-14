@@ -36,6 +36,7 @@ export default function Button(props) {
 		return (
 			<button
 				type={props.submit ? 'submit' : null}
+				disabled={props.disabled}
 				className={className}
 				onClick={onClickHandler}
 			>
