@@ -22,7 +22,7 @@ const rootStyle = {
 </div>
 ```
 
-Использование:
+Подключение компонента:
 
 ```javascript
 import RadioToggle from '@rambler-adtech/ui-kit/lib/RadioToggle.js';

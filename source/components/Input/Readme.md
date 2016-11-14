@@ -10,3 +10,10 @@
 	</p>
 </div>
  ```
+
+Подключение компонента:
+
+```javascript
+import Input from '@rambler-adtech/ui-kit/lib/Input.js';
+import '@rambler-adtech/ui-kit/lib/Input.css';
+```

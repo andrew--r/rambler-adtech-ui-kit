@@ -67,3 +67,10 @@ const data = [
 	height={400}
 >content</CountPerTimeBarChart>
 ```
+
+Подключение компонента:
+
+```javascript
+import CountPerTimeBarChart from '@rambler-adtech/ui-kit/lib/CountPerTimeBarChart.js';
+import '@rambler-adtech/ui-kit/lib/CountPerTimeBarChart.css';
+```

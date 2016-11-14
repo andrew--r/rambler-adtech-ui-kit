@@ -28,3 +28,10 @@ const Input = require('../Input').default;
 	<Input required id="email" type="email" placeholder="Электронная почта" />
 </div>
 ```
+
+Подключение компонента:
+
+```javascript
+import Label from '@rambler-adtech/ui-kit/lib/Label.js';
+import '@rambler-adtech/ui-kit/lib/Label.css';
+```

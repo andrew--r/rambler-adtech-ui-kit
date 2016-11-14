@@ -76,3 +76,10 @@ Alert при клике:
 	</p>
 </div>
 ```
+
+Подключение компонента:
+
+```javascript
+import Button from '@rambler-adtech/ui-kit/lib/Button.js';
+import '@rambler-adtech/ui-kit/lib/Button.css';
+```
