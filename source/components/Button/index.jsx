@@ -20,6 +20,14 @@ export default function Button(props) {
 		}
 	};
 
+	let leftIcon = null;
+
+	if (props.leftIcon) {
+		leftIcon = (
+			<span className="button__icon" style={{backgroundImage: `url(${props.leftIcon})`}} />
+		);
+	}
+
 	if (props.href) {
 		return (
 			<a
@@ -28,6 +36,7 @@ export default function Button(props) {
 				onClick={onClickHandler}
 			>
 				<span className="button__inner">
+					{leftIcon}
 					{props.children}
 				</span>
 			</a>
@@ -41,6 +50,7 @@ export default function Button(props) {
 				onClick={onClickHandler}
 			>
 				<span className="button__inner">
+					{leftIcon}
 					{props.children}
 				</span>
 			</button>
@@ -52,6 +62,10 @@ Button.propTypes = {
 	children: PropTypes.node,
 	href: PropTypes.string,
 	size: PropTypes.oneOf(['small', 'medium', 'large']),
+	/**
+	 * Адрес или base64 uri иконки
+	 */
+	leftIcon: PropTypes.string,
 	/**
 	 * Кнопка отправляет форму
 	 */
@@ -72,6 +86,7 @@ Button.defaultProps = {
 	children: null,
 	href: '',
 	size: 'medium',
+	leftIcon: '',
 	fullWidth: false,
 	bordered: false,
 	disabled: false,
