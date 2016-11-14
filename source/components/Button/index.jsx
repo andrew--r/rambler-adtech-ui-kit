@@ -8,11 +8,11 @@ import './index.styl';
  */
 export default function Button(props) {
 	const className = classNames({
-		button: true,
-		[`button--${props.size}`]: true,
-		'button--bordered': props.bordered,
-		'button--disabled': props.disabled,
-		'button--fullwidth': props.fullWidth,
+		'adt-button': true,
+		[`adt-button--${props.size}`]: true,
+		'adt-button--bordered': props.bordered,
+		'adt-button--disabled': props.disabled,
+		'adt-button--fullwidth': props.fullWidth,
 	});
 	const onClickHandler = (...args) => {
 		if (!props.disabled) {
@@ -24,7 +24,7 @@ export default function Button(props) {
 
 	if (props.leftIcon) {
 		leftIcon = (
-			<span className="button__icon" style={{backgroundImage: `url(${props.leftIcon})`}} />
+			<span className="adt-button__icon" style={{backgroundImage: `url(${props.leftIcon})`}} />
 		);
 	}
 
@@ -35,7 +35,7 @@ export default function Button(props) {
 				className={className}
 				onClick={onClickHandler}
 			>
-				<span className="button__inner">
+				<span className="adt-button__inner">
 					{leftIcon}
 					{props.children}
 				</span>
@@ -49,7 +49,7 @@ export default function Button(props) {
 				className={className}
 				onClick={onClickHandler}
 			>
-				<span className="button__inner">
+				<span className="adt-button__inner">
 					{leftIcon}
 					{props.children}
 				</span>

@@ -12,19 +12,19 @@ export default function RadioToggle(props) {
 	return (
 		<label
 			className={classNames({
-				'radio-toggle-item': true,
-				'radio-toggle-item--active': props.active,
+				'adt-radio-toggle-item': true,
+				'adt-radio-toggle-item--active': props.active,
 			})}
 		>
 			<input
 				type="radio"
 				value={props.label}
 				checked={!!props.active}
-				className="radio-toggle-item__input"
+				className="adt-radio-toggle-item__input"
 				onChange={props.onChange}
 			/>
-			<span className="radio-toggle-item__label">
-				<span className="radio-toggle-item__text">{props.label}</span>
+			<span className="adt-radio-toggle-item__label">
+				<span className="adt-radio-toggle-item__text">{props.label}</span>
 			</span>
 		</label>
 	);

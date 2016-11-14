@@ -11,15 +11,15 @@ export default function Label(props) {
 		<label
 			htmlFor={props.htmlFor}
 			className={classNames({
-				label: true,
-				'label--required': props.required,
+				'adt-label': true,
+				'adt-label--required': props.required,
 			})}
 		>
-			<span className="label__text">
+			<span className="adt-label__text">
 				{props.text}
 			</span>
 
-			{!!props.children && <span className="label__content">
+			{!!props.children && <span className="adt-label__content">
 				{props.children}
 			</span>}
 		</label>

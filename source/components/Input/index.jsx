@@ -10,13 +10,13 @@ export default function Input(props) {
 	return (
 		<div
 			className={classNames({
-				input: true,
-				'input--required': props.required,
-				'input--disabled': props.disabled,
+				'adt-input': true,
+				'adt-input--required': props.required,
+				'adt-input--disabled': props.disabled,
 			})}
 		>
 			<input
-				className="input__field"
+				className="adt-input__field"
 				{...props}
 			/>
 		</div>

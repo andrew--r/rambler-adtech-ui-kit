@@ -1,7 +1,7 @@
 @import "../../variables"
 
 
-.radio-toggle-item
+.adt-radio-toggle-item
 	font-size $base-font-size
 
 	&__input
@@ -23,17 +23,17 @@
 		&:not(:first-child)
 			margin-left -.125em
 
-		.radio-toggle-item:first-child &
+		.adt-radio-toggle-item:first-child &
 			border-radius .1875em 0 0 .1875em
 
-		.radio-toggle-item:last-child &
+		.adt-radio-toggle-item:last-child &
 			border-radius 0 .1875em .1875em 0
 			border-right-width .125em
 
-		.radio-toggle-item:first-child:last-child &
+		.adt-radio-toggle-item:first-child:last-child &
 			border-radius 0
 
-		.radio-toggle-item--active &
+		.adt-radio-toggle-item--active &
 			z-index 1
 			color $theme-color
 			border-color rgba($theme-color, 50%)
