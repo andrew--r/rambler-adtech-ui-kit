@@ -1,6 +1,7 @@
 /* eslint-disable import/prefer-default-export */
 
 // Import all components
+import Checkbox from './components/Checkbox';
 import Label from './components/Label';
 import Button from './components/Button';
 import Input from './components/Input';
@@ -9,6 +10,7 @@ import CountPerTimeBarChart from './components/CountPerTimeBarChart';
 
 
 export {
+	Checkbox,
 	Label,
 	Button,
 	Input,

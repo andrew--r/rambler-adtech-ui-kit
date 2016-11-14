@@ -1,0 +1,58 @@
+@import "../../variables"
+
+$checkbox-height = 2.5em
+$checkbox-check-size = 1em
+$checkbox-check-area-size = 1.5em
+
+$checkbox-line-height = 1.2
+$checkbox-baseline = 1em * $checkbox-line-height
+
+$checkbox-vertical-padding = ($checkbox-height - $checkbox-baseline) / 2
+$checkbox-horizontal-padding = 1em
+
+.adt-checkbox
+	display inline-block
+	font-size $base-font-size
+
+	&__input
+		display none
+
+	&__label
+		box-sizing border-box
+		position relative
+		display inline-block
+		padding $checkbox-vertical-padding 0
+		padding-left $checkbox-check-area-size
+		line-height $checkbox-line-height
+		cursor pointer
+
+		.adt-checkbox--bordered &
+			border solid .0625em $input-border-color
+			border-radius .25em
+			padding-left $checkbox-check-area-size + $checkbox-horizontal-padding
+			padding-right $checkbox-horizontal-padding
+
+		.adt-checkbox--bordered .adt-checkbox__input:checked + &
+			color $theme-color
+			border-color $theme-color
+
+		&::before
+			content ''
+			box-sizing border-box
+			display inline-block
+			vertical-align text-bottom
+			width $checkbox-check-size
+			height $checkbox-check-size
+			margin-left $checkbox-check-area-size * -1
+			margin-right $checkbox-check-size * 0.5
+			border 1px solid $input-border-color
+			border-radius 25%
+			background-color #fff
+
+			.adt-checkbox__input:checked + &
+				border-color $theme-color
+				background none scroll no-repeat center center / .625em $theme-color
+				background-image url('data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMTAgOCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIHRyYW5zZm9ybT0idHJhbnNsYXRlKC02OTQtNTEyKSIgZD0ibTY5NSA1MTZsMi41IDIuNSA1LjUtNS41IiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZT0iI2ZmZiIvPjwvZz48L3N2Zz4=')
+
+
+
