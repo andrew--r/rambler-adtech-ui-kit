@@ -35,6 +35,7 @@ export default function Button(props) {
 	} else { // eslint-disable-line no-else-return
 		return (
 			<button
+				type={props.submit ? 'submit' : null}
 				className={className}
 				onClick={onClickHandler}
 			>
@@ -50,6 +51,10 @@ Button.propTypes = {
 	children: PropTypes.node,
 	href: PropTypes.string,
 	size: PropTypes.oneOf(['small', 'medium', 'large']),
+	/**
+	 * Кнопка отправляет форму
+	 */
+	submit: PropTypes.bool,
 	/**
 	 * Займёт ли кнопка всю доступную ширину
 	 */
