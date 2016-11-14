@@ -35,11 +35,13 @@ $active-border-top-color = darken($theme-color, 10%)
 	&:focus,
 	&:hover
 		transition none
+		color #fff
 		border-color $hover-background
 		border-bottom-color $hover-border-bottom-color
 		background $hover-background
 
 	&:active
+		color #fff
 		border-color $active-background
 		border-top-color $active-border-top-color
 		background $active-background
@@ -94,3 +96,6 @@ $active-border-top-color = darken($theme-color, 10%)
 		height 1em
 		margin-right .625em
 		background-size cover
+
+		.adt-button--disabled &
+			opacity: .5
