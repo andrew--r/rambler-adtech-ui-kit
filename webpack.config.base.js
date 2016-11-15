@@ -16,7 +16,12 @@ const extractStylus = new ExtractTextPlugin('[name].css');
 const componentsEntries = glob
 	.sync(`${COMPONENTS}/**/*.jsx`)
 	.reduce((acc, componentPath) => {
-		const componentName = path.basename(componentPath).replace(path.extname(componentPath), '');
+		let componentName = path.basename(componentPath).replace(path.extname(componentPath), '');
+
+		if (/\/icons\//.test(path.dirname(componentPath))) {
+			componentName = `Icon${componentName}`;
+		}
+
 		acc[componentName] = [componentPath];
 		return acc;
 	}, {});

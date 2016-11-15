@@ -42,7 +42,7 @@ function generateResourcePath(resourceName, section) {
 
 module.exports = (plop) => {
 	plop.setGenerator('Form control', {
-		description: 'Create a new form control',
+		description: 'Create a new form control component',
 		prompts: [componentNamePrompt],
 		actions: [
 			Object.assign({}, addScriptAction, {
@@ -59,6 +59,34 @@ module.exports = (plop) => {
 				path: 'source/index.js',
 				pattern: /(\/\/ Import all components)/g,
 				template: '$1\nimport {{pascalCase name}} from \'./components/forms/{{pascalCase name}}/{{pascalCase name}}\';',
+			},
+			{
+				type: 'modify',
+				path: 'source/index.js',
+				pattern: /(export {)/g,
+				template: '$1\n\t{{pascalCase name}},',
+			},
+		],
+	});
+
+	plop.setGenerator('Icon', {
+		description: 'Create a new icon component',
+		prompts: [componentNamePrompt],
+		actions: [
+			Object.assign({}, addScriptAction, {
+				path: generateResourcePath('script', 'icons'),
+			}),
+			Object.assign({}, addStylesAction, {
+				path: generateResourcePath('style', 'icons'),
+			}),
+			Object.assign({}, addReadmeAction, {
+				path: generateResourcePath('readme', 'icons'),
+			}),
+			{
+				type: 'modify',
+				path: 'source/index.js',
+				pattern: /(\/\/ Import all components)/g,
+				template: '$1\nimport {{pascalCase name}} from \'./components/icons/{{pascalCase name}}/{{pascalCase name}}\';',
 			},
 			{
 				type: 'modify',
