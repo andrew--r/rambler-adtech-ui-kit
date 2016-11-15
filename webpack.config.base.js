@@ -13,15 +13,17 @@ const OUT = './lib';
 
 const extractStylus = new ExtractTextPlugin('[name].css');
 
-const componentsList = glob.sync(`${COMPONENTS}/*`).map(path => path.slice(COMPONENTS.length + 1));
-const componentsEntries = componentsList.reduce((acc, componentName) => {
-	acc[componentName] = [`${COMPONENTS}/${componentName}/index.jsx`];
-	return acc;
-}, {});
+const componentsEntries = glob
+	.sync(`${COMPONENTS}/**/*.jsx`)
+	.reduce((acc, componentPath) => {
+		const componentName = path.basename(componentPath).replace(path.extname(componentPath), '');
+		acc[componentName] = [componentPath];
+		return acc;
+	}, {});
+
 const entries = Object.assign({}, componentsEntries, {
 	index: [`${SOURCE}/index.js`],
 });
-
 
 module.exports = {
 	entry: entries,
@@ -32,6 +34,9 @@ module.exports = {
 	},
 	resolve: {
 		extensions: ['', '.js', '.jsx'],
+		alias: {
+			_styles: path.resolve(__dirname, `${SOURCE}/styles`),
+		},
 	},
 	externals: [
 		{
@@ -63,8 +68,8 @@ module.exports = {
 		}),
 	],
 	postcss: [
-	    autoprefixer({
-	      browsers: ['> 1%', 'last 5 versions'],
-	    }),
-	  ],
+		autoprefixer({
+			browsers: ['> 1%', 'last 5 versions'],
+		}),
+	],
 };

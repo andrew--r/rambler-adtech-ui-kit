@@ -1,16 +1,21 @@
 const path = require('path');
 
+const SOURCE = `./source`;
+
 module.exports = {
-	title: 'React UI kit boilerplate',
-	components: './source/components/**/*.jsx',
+	title: 'RAMBLER&Co AdTech UI Kit',
 	sections: [
 		{
 			name: 'Формы',
-			components: './source/components/*(Button|Input|Label|RadioToggle|CheckBox|Textarea)/*.jsx',
+			components: `${SOURCE}/components/forms/**/*.jsx`,
+		},
+		{
+			name: 'Остальное',
+			components: `${SOURCE}/components/other/**/*.jsx`,
 		},
 	],
 	updateWebpackConfig(webpackConfig) {
-		const componentsDir = path.join(__dirname, 'source/components');
+		const componentsDir = path.resolve(__dirname, `${SOURCE}/components`);
 
 		webpackConfig.module.loaders.push(
 			{
@@ -24,6 +29,10 @@ module.exports = {
 				loader: 'style!css!stylus',
 			}
 		);
+
+		webpackConfig.resolve.alias = {
+			_styles: path.resolve(__dirname, `${SOURCE}/styles`),
+		};
 
 		return webpackConfig;
 	},

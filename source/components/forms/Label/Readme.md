@@ -22,7 +22,7 @@
 Вместе со стандартным полем ввода:
 
 ```
-const Input = require('../Input').default;
+const Input = require('../Input/Input').default;
 <div style={{fontFamily: 'sans-serif'}}>
 	<Label required text="Электронная почта" htmlFor="email" />
 	<Input required id="email" type="email" placeholder="Электронная почта" onChange={() => {}} value="" />

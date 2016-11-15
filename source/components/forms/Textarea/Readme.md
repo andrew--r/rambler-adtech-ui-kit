@@ -1,7 +1,7 @@
 Примеры использования:
 
 ```
-const Label = require('../Label').default;
+const Label = require('../Label/Label').default;
 <div style={{fontFamily: 'sans-serif'}}>
 	<p style={{margin: '0 0 1.5em'}}>
 		<Textarea placeholder="Ваш комментарий" value="" onChange={() => {}} />
