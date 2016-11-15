@@ -1,6 +1,6 @@
 {
   "name": "@rambler-adtech/ui-kit",
-  "version": "1.5.1",
+  "version": "2.0.0",
   "main": "lib/index.js",
   "author": "Andrew Romanov <me@andrew-r.ru>",
   "license": "MIT",
