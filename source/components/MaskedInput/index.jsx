@@ -11,7 +11,7 @@ import './index.styl';
  */
 export default function MaskedInput(props) {
 	return (
-		<div
+		<span
 			className={classNames({
 				'adt-masked-input': true,
 				'adt-base-input': true,
@@ -22,7 +22,7 @@ export default function MaskedInput(props) {
 				className="adt-base-input__field adt-masked-input__field"
 				{...props}
 			/>
-		</div>
+		</span>
 	);
 }
 

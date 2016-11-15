@@ -8,7 +8,7 @@ import './index.styl';
  */
 export default function Textarea(props) {
 	return (
-		<div
+		<span
 			className={classNames({
 				'adt-textarea': true,
 				'adt-base-input': true,
@@ -19,7 +19,7 @@ export default function Textarea(props) {
 				className="adt-base-input__field adt-textarea__field"
 				{...props}
 			/>
-		</div>
+		</span>
 	);
 }
 

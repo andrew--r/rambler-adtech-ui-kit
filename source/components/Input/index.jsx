@@ -8,7 +8,7 @@ import './index.styl';
  */
 export default function Input(props) {
 	return (
-		<div
+		<span
 			className={classNames({
 				'adt-input': true,
 				'adt-base-input': true,
@@ -19,7 +19,7 @@ export default function Input(props) {
 				className="adt-base-input__field adt-input__field"
 				{...props}
 			/>
-		</div>
+		</span>
 	);
 }
 
