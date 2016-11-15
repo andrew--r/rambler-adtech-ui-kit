@@ -3,7 +3,6 @@
 .DS_Store
 
 # Build files
-styleguide/
 
 # Development stuff
 node_modules/
