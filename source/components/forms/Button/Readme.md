@@ -6,7 +6,11 @@ const rowStyle = {
 	fontFamily: 'sans-serif',
 };
 
-const plus = 'data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMTQgMTQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj48cGF0aCBkPSJtNjgxIDU3NnYtNC45OTNjMC0uNTU3LS40NDgtMS4wMS0xLTEuMDEtLjU1NiAwLTEgLjQ1MS0xIDEuMDF2NC45OTNoLTQuOTkzYy0uNTU3IDAtMS4wMS40NDgtMS4wMSAxIDAgLjU1Ni40NTEgMSAxLjAxIDFoNC45OTN2NC45OTNjMCAuNTU3LjQ0OCAxLjAxIDEgMS4wMS41NTYgMCAxLS40NTEgMS0xLjAxdi00Ljk5M2g0Ljk5M2MuNTU3IDAgMS4wMS0uNDQ4IDEuMDEtMSAwLS41NTYtLjQ1MS0xLTEuMDEtMWgtNC45OTMiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC02NzMtNTcwKSIgZmlsbD0iI2ZmZiIvPjwvZz48L3N2Zz4=';
+const IconPlus = require('../../icons/Plus/Plus').default;
+const plus = (
+	<IconPlus />
+);
+
 <div>
 	<div style={rowStyle}>
 		<span style={{margin: '0 1em'}}>
@@ -14,7 +18,7 @@ const plus = 'data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMTQgMTQiIHhtbG5z
 		</span>
 
 		<span style={{margin: '0 1em'}}>
-			<Button leftIcon={plus} size="small">маленькая кнопка с иконкой</Button>
+			<Button leftIconComponent={plus} size="small">маленькая кнопка с иконкой</Button>
 		</span>
 
 		<span style={{margin: '0 1em'}}>
@@ -32,7 +36,7 @@ const plus = 'data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMTQgMTQiIHhtbG5z
 		</span>
 
 		<span style={{margin: '0 1em'}}>
-			<Button leftIcon={plus}>обычная кнопка с иконкой</Button>
+			<Button leftIconComponent={plus}>обычная кнопка с иконкой</Button>
 		</span>
 
 		<span style={{margin: '0 1em'}}>
@@ -50,7 +54,7 @@ const plus = 'data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMTQgMTQiIHhtbG5z
 		</span>
 
 		<span style={{margin: '0 1em'}}>
-			<Button leftIcon={plus} size="large">большая кнопка с иконкой</Button>
+			<Button leftIconComponent={plus} size="large">большая кнопка с иконкой</Button>
 		</span>
 
 		<span style={{margin: '0 1em'}}>

@@ -22,9 +22,11 @@ export default function Button(props) {
 
 	let leftIcon = null;
 
-	if (props.leftIcon) {
+	if (props.leftIconComponent) {
 		leftIcon = (
-			<span className="adt-button__icon" style={{backgroundImage: `url(${props.leftIcon})`}} />
+			<span className="adt-button__icon">
+				{props.leftIconComponent}
+			</span>
 		);
 	}
 
@@ -66,6 +68,10 @@ Button.propTypes = {
 	 * Адрес или base64 uri иконки
 	 */
 	leftIcon: PropTypes.string,
+	/**
+	 * Компонент иконки
+	 */
+	leftIconComponent: PropTypes.node,
 	/**
 	 * Кнопка отправляет форму
 	 */
