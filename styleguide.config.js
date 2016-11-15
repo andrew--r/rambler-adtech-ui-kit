@@ -1,6 +1,6 @@
 const path = require('path');
 
-const SOURCE = `./source`;
+const SOURCE = './source';
 
 module.exports = {
 	title: 'RAMBLER&Co AdTech UI Kit',
@@ -8,6 +8,10 @@ module.exports = {
 		{
 			name: 'Формы',
 			components: `${SOURCE}/components/forms/**/*.jsx`,
+		},
+		{
+			name: 'Иконки',
+			components: `${SOURCE}/components/icons/**/*.jsx`,
 		},
 		{
 			name: 'Остальное',
