@@ -1,6 +1,7 @@
 /* eslint-disable import/prefer-default-export */
 
 // Import all components
+import Textarea from './components/Textarea';
 import Checkbox from './components/Checkbox';
 import Label from './components/Label';
 import Button from './components/Button';
@@ -10,6 +11,7 @@ import CountPerTimeBarChart from './components/CountPerTimeBarChart';
 
 
 export {
+	Textarea,
 	Checkbox,
 	Label,
 	Button,

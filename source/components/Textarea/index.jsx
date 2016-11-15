@@ -4,37 +4,35 @@ import './index.styl';
 
 
 /**
- * Поле ввода. Все пропсы компонента транслируются напрямую в <input />.
+ * Многострочное поле ввода. Все пропсы компонента транслируются напрямую в <textarea />.
  */
-export default function Input(props) {
+export default function Textarea(props) {
 	return (
 		<div
 			className={classNames({
-				'adt-input': true,
+				'adt-textarea': true,
 				'adt-base-input': true,
 				'adt-base-input--disabled': props.disabled,
 			})}
 		>
-			<input
-				className="adt-base-input__field adt-input__field"
+			<textarea
+				className="adt-base-input__field adt-textarea__field"
 				{...props}
 			/>
 		</div>
 	);
 }
 
-Input.propTypes = {
+Textarea.propTypes = {
 	value: PropTypes.string.isRequired,
 	onChange: PropTypes.func.isRequired,
-	type: PropTypes.string,
 	disabled: PropTypes.bool,
 	required: PropTypes.bool,
 };
 
-Input.defaultProps = {
+Textarea.defaultProps = {
 	value: '',
 	onChange: () => {},
-	type: 'text',
 	disabled: false,
 	required: false,
 };

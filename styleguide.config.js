@@ -6,7 +6,7 @@ module.exports = {
 	sections: [
 		{
 			name: 'Формы',
-			components: './source/components/*(Button|Input|Label|RadioToggle|CheckBox)/*.jsx',
+			components: './source/components/*(Button|Input|Label|RadioToggle|CheckBox|Textarea)/*.jsx',
 		},
 	],
 	updateWebpackConfig(webpackConfig) {
