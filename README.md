@@ -61,7 +61,7 @@ $ yarn build
 Сборка только новой версии:
 
 ```bash
-$ yarn build:prepare && yarn build:bundle
+$ yarn build:bundle
 ```
 
 Сборка только стайлгайда:
@@ -73,7 +73,7 @@ $ yarn build:styleguide
 Сборка скриптов в режиме отладки (с картами кода и без минификации):
 
 ```bash
-$ yarn build:prepare && yarn build:dev
+$ yarn build:dev
 ```
 
 Запуск линтера:
