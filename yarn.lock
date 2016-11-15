@@ -4347,6 +4347,10 @@ react-dom:
   version "15.3.2"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-15.3.2.tgz#c46b0aa5380d7b838e7a59c4a7beff2ed315531f"
 
+react-input-mask:
+  version "0.7.5"
+  resolved "https://registry.yarnpkg.com/react-input-mask/-/react-input-mask-0.7.5.tgz#37d3924670582ad3c155214d4b3e140c235e685d"
+
 react-styleguidist:
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/react-styleguidist/-/react-styleguidist-4.1.0.tgz#ae78f66a93bec70c4b33ff0871647880b0df5f3f"

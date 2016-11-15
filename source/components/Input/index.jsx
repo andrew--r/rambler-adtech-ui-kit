@@ -4,7 +4,7 @@ import './index.styl';
 
 
 /**
- * Поле ввода. Все пропсы компонента транслируются напрямую в <input />.
+ * Поле ввода. Все пропсы компонента транслируются напрямую в `<input />`.
  */
 export default function Input(props) {
 	return (
@@ -32,8 +32,6 @@ Input.propTypes = {
 };
 
 Input.defaultProps = {
-	value: '',
-	onChange: () => {},
 	type: 'text',
 	disabled: false,
 	required: false,

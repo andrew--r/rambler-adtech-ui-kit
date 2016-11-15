@@ -4,7 +4,7 @@ import './index.styl';
 
 
 /**
- * Многострочное поле ввода. Все пропсы компонента транслируются напрямую в <textarea />.
+ * Многострочное поле ввода. Все пропсы компонента транслируются напрямую в `<textarea />`.
  */
 export default function Textarea(props) {
 	return (
@@ -31,8 +31,6 @@ Textarea.propTypes = {
 };
 
 Textarea.defaultProps = {
-	value: '',
-	onChange: () => {},
 	disabled: false,
 	required: false,
 };
