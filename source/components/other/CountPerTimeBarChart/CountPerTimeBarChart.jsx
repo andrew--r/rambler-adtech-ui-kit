@@ -1,4 +1,5 @@
 import React, {PropTypes} from 'react';
+import assign from 'object-assign';
 import * as d3 from 'd3';
 
 import './index.styl';
@@ -104,12 +105,12 @@ function createAxisY(svg, chartWidth, chartHeight, props) {
  */
 export default class CountPerTimeBarChart extends React.Component {
 	componentDidMount() {
-		const props = Object.assign({}, this.props);
+		const props = assign({}, this.props);
 		this.renderGraph(props);
 	}
 
 	shouldComponentUpdate(nextProps) {
-		const props = Object.assign({}, nextProps);
+		const props = assign({}, nextProps);
 		this.reusableGraph(props);
 		return false;
 	}
