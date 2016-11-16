@@ -41,6 +41,7 @@ Plus.propTypes = {
 };
 
 Plus.defaultProps = {
+	size: '1em',
 	fill: '#fff',
 	style: {},
 };
