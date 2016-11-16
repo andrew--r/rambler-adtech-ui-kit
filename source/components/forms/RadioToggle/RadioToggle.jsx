@@ -18,6 +18,7 @@ export default function RadioToggle(props) {
 		>
 			<input
 				type="radio"
+				id={props.id}
 				value={props.label}
 				checked={!!props.active}
 				className="adt-radio-toggle-item__input"
@@ -39,6 +40,10 @@ RadioToggle.propTypes = {
 	 * Текст переключателя
 	 */
 	label: PropTypes.string.isRequired,
+	/**
+	 * Необязательный идентификатор переключателя
+	 */
+	id: PropTypes.string,
 	/**
 	 * Индикатор активности
 	 */
