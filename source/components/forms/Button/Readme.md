@@ -71,13 +71,16 @@ const plus = (
 Кнопка на всю доступную ширину:
 
 ```
-const plus = 'data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMTQgMTQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj48cGF0aCBkPSJtNjgxIDU3NnYtNC45OTNjMC0uNTU3LS40NDgtMS4wMS0xLTEuMDEtLjU1NiAwLTEgLjQ1MS0xIDEuMDF2NC45OTNoLTQuOTkzYy0uNTU3IDAtMS4wMS40NDgtMS4wMSAxIDAgLjU1Ni40NTEgMSAxLjAxIDFoNC45OTN2NC45OTNjMCAuNTU3LjQ0OCAxLjAxIDEgMS4wMS41NTYgMCAxLS40NTEgMS0xLjAxdi00Ljk5M2g0Ljk5M2MuNTU3IDAgMS4wMS0uNDQ4IDEuMDEtMSAwLS41NTYtLjQ1MS0xLTEuMDEtMWgtNC45OTMiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC02NzMtNTcwKSIgZmlsbD0iI2ZmZiIvPjwvZz48L3N2Zz4=';
+const IconPlus = require('../../icons/Plus/Plus').default;
+const plus = (
+	<IconPlus />
+);
 
 <div>
 	<span style={{display: 'block', margin: '0 0 1em'}}>
 		<Button fullWidth>широкая кнопка</Button>
 	</span>
-	<Button fullWidth leftIcon={plus}>широкая кнопка с иконкой</Button>
+	<Button fullWidth leftIconComponent={plus}>широкая кнопка с иконкой</Button>
 </div>
 
 ```
