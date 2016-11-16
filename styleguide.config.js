@@ -19,12 +19,13 @@ module.exports = {
 		},
 	],
 	updateWebpackConfig(webpackConfig) {
+		const sourceDir = path.resolve(__dirname, SOURCE);
 		const componentsDir = path.resolve(__dirname, `${SOURCE}/components`);
 
 		webpackConfig.module.loaders.push(
 			{
 				test: /\.jsx?$/,
-				include: componentsDir,
+				include: sourceDir,
 				loader: 'babel',
 			},
 			{
@@ -35,6 +36,7 @@ module.exports = {
 		);
 
 		webpackConfig.resolve.alias = {
+			_utils: path.resolve(__dirname, `${SOURCE}/utils`),
 			_styles: path.resolve(__dirname, `${SOURCE}/styles`),
 		};
 

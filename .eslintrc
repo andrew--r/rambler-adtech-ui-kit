@@ -20,5 +20,8 @@
 			"ignore": ["react"]
 		}],
 		"import/extensions": 0
+	},
+	"settings": {
+		"import/resolver": "webpack"
 	}
 }

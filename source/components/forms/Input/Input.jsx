@@ -1,7 +1,17 @@
 import React, {PropTypes} from 'react';
 import classNames from 'classnames';
 import VendorMaskedInput from 'react-input-mask';
+import filterObjectByKeys from '_utils/filter-object-by-keys';
 import './index.styl';
+
+
+// пропсы, которые не нужно прокидывать в <input />
+const excludeProps = {
+	mask: true,
+	maskChar: true,
+	formatChars: true,
+	alwaysShowMask: true,
+};
 
 
 /**
@@ -32,7 +42,7 @@ export default function Input(props) {
 		fieldComponent = (
 			<input
 				className={fieldClassName}
-				{...props}
+				{...filterObjectByKeys(props, excludeProps)}
 			/>
 		);
 	}

@@ -40,6 +40,7 @@ module.exports = {
 	resolve: {
 		extensions: ['', '.js', '.jsx'],
 		alias: {
+			_utils: path.resolve(__dirname, `${SOURCE}/utils`),
 			_styles: path.resolve(__dirname, `${SOURCE}/styles`),
 		},
 	},
