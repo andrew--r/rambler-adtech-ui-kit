@@ -2,6 +2,10 @@
 
 // Базовые стили для полей ввода, будь то <input /> или <textarea />
 
+$input-horizontal-padding = .875em
+$icon-size = 1.125em
+$icon-spacing = $input-horizontal-padding * 1.5
+
 .adt-base-input
 	position relative
 	box-sizing border-box
@@ -12,7 +16,7 @@
 		box-sizing border-box
 		display block
 		width 100%
-		padding .5625em .875em
+		padding .5625em $input-horizontal-padding
 		font-size .875em
 		outline 0
 		border 1px solid $input-border-color
@@ -33,3 +37,22 @@
 			color $muted-text-color
 			background $muted-background-color
 			border-color $muted-border-color
+
+		.adt-base-input--has-left-icon &
+			padding-left $icon-spacing + $icon-size
+
+		.adt-base-input--has-right-icon &
+			padding-right $icon-spacing + $icon-size
+
+	&__icon
+		position absolute
+		top 50%
+		transform translateY(-50%)
+		width 1em
+		height 1em
+
+		&--left
+			left $icon-spacing * 0.5
+
+		&--right
+			right $icon-spacing * 0.5

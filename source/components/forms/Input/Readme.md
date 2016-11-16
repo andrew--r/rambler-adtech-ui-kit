@@ -50,6 +50,40 @@
 </div>
 ```
 
+С иконками:
+
+```
+const Loupe = require('../../icons/Loupe/Loupe').default;
+const Plus = require('../../icons/Plus/Plus').default;
+
+<div>
+	<p style={{margin: '0 0 1em'}}>
+		<Input
+			value=""
+			onChange={() => {}}
+			leftIconComponent={<Loupe />}
+		/>
+	</p>
+
+	<p style={{margin: '0 0 1em'}}>
+		<Input
+			value=""
+			onChange={() => {}}
+			rightIconComponent={<Plus fill="#01afde" style={{cursor: 'pointer'}} />}
+		/>
+	</p>
+
+	<p>
+		<Input
+			value=""
+			onChange={() => {}}
+			leftIconComponent={<Loupe />}
+			rightIconComponent={<Plus fill="#01afde" style={{cursor: 'pointer'}} />}
+		/>
+	</p>
+</div>
+```
+
 Подключение компонента:
 
 ```javascript
