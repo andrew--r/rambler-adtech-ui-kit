@@ -13,6 +13,7 @@ export default function Label(props) {
 			className={classNames({
 				'adt-label': true,
 				'adt-label--required': props.required,
+				'adt-label--clickable': props.htmlFor,
 			})}
 		>
 			<span className="adt-label__text">
