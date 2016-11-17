@@ -8,8 +8,8 @@ const Label = require('../Label/Label').default;
 	</p>
 
 	<p style={{margin: '0 0 1.5em'}}>
-		<Label text="Ваш комментарий" />
-		<Textarea placeholder="Ваш комментарий" value="Замечательный набор компонентов!" onChange={() => {}} />
+		<Label text="Ваш комментарий" htmlFor="comment" />
+		<Textarea id="comment" placeholder="Ваш комментарий" value="Замечательный набор компонентов!" onChange={() => {}} />
 	</p>
 
 	<p style={{margin: '0'}}>
