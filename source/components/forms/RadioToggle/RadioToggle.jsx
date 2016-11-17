@@ -11,6 +11,7 @@ import './index.styl';
 export default function RadioToggle(props) {
 	return (
 		<label
+			htmlFor={props.id}
 			className={classNames({
 				'adt-radio-toggle-item': true,
 				'adt-radio-toggle-item--active': props.active,
@@ -18,6 +19,7 @@ export default function RadioToggle(props) {
 		>
 			<input
 				type="radio"
+				name={props.name}
 				id={props.id}
 				value={props.label}
 				checked={!!props.active}
