@@ -12,7 +12,7 @@
     "build:bundle": "yarn build:prepare && ./node_modules/.bin/cross-env NODE_ENV=production ./node_modules/.bin/webpack --progress --colors",
     "build:styleguide": "styleguidist build",
     "lint": "./node_modules/.bin/eslint --ext .js --ext .jsx ./source",
-    "plop": "plop"
+    "new": "plop"
   },
   "pre-commit": [
     "lint"
@@ -21,6 +21,7 @@
     "classnames": "^2.2.5",
     "d3": "^4.3.0",
     "object-assign": "^4.1.0",
+    "object-omit": "^1.0.0",
     "react-input-mask": "^0.7.5",
     "shortid": "^2.2.6"
   },
