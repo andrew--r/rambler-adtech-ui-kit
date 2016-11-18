@@ -6,6 +6,10 @@ module.exports = {
 	title: 'RAMBLER&Co AdTech UI Kit',
 	sections: [
 		{
+			name: 'Введение',
+			content: './README.md',
+		},
+		{
 			name: 'Формы',
 			components: `${SOURCE}/components/forms/**/*.jsx`,
 		},

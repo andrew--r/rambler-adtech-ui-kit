@@ -1,23 +1,13 @@
 import React, {PropTypes} from 'react';
 import classNames from 'classnames';
 import VendorMaskedInput from 'react-input-mask';
-import assign from 'object-assign';
-import filterObjectByKeys from '_utils/filter-object-by-keys';
+import omit from 'object-omit';
 import './index.styl';
 
 
 // пропсы, которые не нужно прокидывать в <input />
-const maskedinputExcludeProps = {
-	leftIconComponent: true,
-	rightIconComponent: true,
-};
-
-const inputExcludeProps = assign({}, maskedinputExcludeProps, {
-	mask: true,
-	maskChar: true,
-	formatChars: true,
-	alwaysShowMask: true,
-});
+const maskedinputExcludeProps = ['leftIconComponent', 'rightIconComponent'];
+const inputExcludeProps = maskedinputExcludeProps.concat(['mask', 'maskChar', 'formatChars', 'alwaysShowMask']);
 
 
 /**
@@ -61,14 +51,14 @@ export default function Input(props) {
 		fieldComponent = (
 			<VendorMaskedInput
 				className={fieldClassName}
-				{...filterObjectByKeys(props, maskedinputExcludeProps)}
+				{...omit(props, maskedinputExcludeProps)}
 			/>
 		);
 	} else {
 		fieldComponent = (
 			<input
 				className={fieldClassName}
-				{...filterObjectByKeys(props, inputExcludeProps)}
+				{...omit(props, inputExcludeProps)}
 			/>
 		);
 	}
